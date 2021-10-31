@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "8e2b9ca3-6299-408d-9d8e-cb82c01adc67",
+		"name": "PROVA JSP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Criar Festa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"requester\" : \"Gobatto\",\r\n    \"day\" : 4,\r\n    \"month\" : 5,\r\n    \"guests\" : \"Maria Clara, Neuza Silva, José Roberto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/party/api/v1/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"party",
+						"api",
+						"v1",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisar todas as festas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/party/api/v1/search-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"party",
+						"api",
+						"v1",
+						"search-all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Festa pelo ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/party/api/v1/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"party",
+						"api",
+						"v1",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisar por parâmetro",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/party/api/v1/search?param=id&value=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"party",
+						"api",
+						"v1",
+						"search"
+					],
+					"query": [
+						{
+							"key": "param",
+							"value": "id"
+						},
+						{
+							"key": "value",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
